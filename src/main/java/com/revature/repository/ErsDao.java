@@ -11,6 +11,6 @@ import com.revature.util.HibernateUtil;
 public class ErsDao {
 	public List<userRoles> getUserRoles() {
 		Session session = HibernateUtil.getSession();
-		return session.createQuery("from ERS_USER_ROLES").list();
+		return session.createQuery("from userRoles0").list();
 	}
 }

@@ -20,4 +20,39 @@
     <servlet-name>ersServlet</servlet-name>
     <url-pattern>/welcome</url-pattern>
   </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>homePage</servlet-name>
+    <servlet-class>com.revature.HomePageServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>homePage</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>com.revature.registerServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/reg</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>registerDao</servlet-name>
+    <servlet-class>com.revature.RegisterDaoServelet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>registerDao</servlet-name>
+    <url-pattern>/regDao</url-pattern>
+  </servlet-mapping>
+
 </web-app>
+

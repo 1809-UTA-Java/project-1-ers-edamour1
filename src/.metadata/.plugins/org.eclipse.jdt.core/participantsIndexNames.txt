@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/developer/revature workspace/project-1-ers-edamour1/src/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3532637213.index
+/ers/src/main/resources

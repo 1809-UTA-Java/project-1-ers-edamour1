@@ -4,11 +4,17 @@ package com.revature;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+
+import com.revature.model.userRoles;
+import com.revature.util.HibernateUtil;
 
 /**
  * Servlet implementation class ersServlet
@@ -38,20 +44,24 @@ public class ersServlet extends HttpServlet {
 		password = request.getParameter("password");
 		
 		PrintWriter writer = response.getWriter();
+		userRoles u = null;
 		
-		if(username.equals("worker") && password.equals("work")) {
+		Session session = HibernateUtil.getSession();
+		
+		u = (userRoles) session.get(userRoles.class, 1);
+		
+		if(username.equals(u.getUrRole()) && password.equals("work")) {
 		
 			writer.println("Welcome");
+			request.setAttribute("name", u.getUrRole());
+			
+			RequestDispatcher rd = request.getRequestDispatcher("home");
+			
+			rd.forward(request, response);
 		}else{
 			writer.println("Invalid username or passeword");
 		}//end of else statement
-		
-	/*	public List<Animal> getAnimals() {
-			Session session = HibernateUtil.getSession();
-			return session.createQuery("from Animal").list();
-		} */
-		
-		
+				
 	}//end of doPost method
-
+	
 }//end of ersServlet class 

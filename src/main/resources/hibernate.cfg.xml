@@ -10,8 +10,13 @@
 		<property name="hibernate.connection.password">ers</property>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
 		
 		<mapping resource="userRoles.hbm.xml"></mapping>
+		<mapping resource="ErsUsers.hbm.xml"></mapping>
+		<mapping resource="ErsReimbursementType.hbm.xml"></mapping>
+		<mapping resource="ErsReimbursementStatus.hbm.xml"></mapping>
+		
 <!-- 		<mapping class="com.revature.model.userRoles"></mapping>  -->
 	</session-factory>
 </hibernate-configuration>
