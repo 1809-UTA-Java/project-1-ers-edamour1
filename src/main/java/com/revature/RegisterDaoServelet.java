@@ -38,6 +38,7 @@ public class RegisterDaoServelet extends HttpServlet{
         
 		
 		Transaction tx = session.beginTransaction();
+		
 		uUsername = request.getParameter("username");
 		uPassword  = request.getParameter("password");
 		uFirstname = request.getParameter("firstname");

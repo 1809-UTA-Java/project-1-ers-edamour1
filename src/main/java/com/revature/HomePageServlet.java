@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.hibernate.Session;
 
+import com.revature.model.ErsUsers;
 import com.revature.model.userRoles;
 import com.revature.util.HibernateUtil;
 
@@ -24,7 +25,7 @@ public class HomePageServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String k = (String) request.getAttribute("name");
+		ErsUsers k = (ErsUsers) request.getAttribute("name");
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<!DOCTYPE html>\n" + 
@@ -37,8 +38,9 @@ public class HomePageServlet extends HttpServlet {
 				"<h1>Employee Homepage</h1>\n" + 
 				"<h1>Menu</h1>\n" + 
 				"<nav>\n" + 
-				"<button type=\"button\">upload an image of receipt</button>\n" + 
-				"<button type=\"button\">reimbursement requests</button>\n" + 
+				"<form action = \"reimburse\" method = \"post\">\n" + 
+				"<button type=\"submit\">reimbursement requests</button>\n" +
+				"</form>\n" + 
 				"<button action = \"information\" type=\"button\">information</button>\n" + 
 				"<button type=\"button\">update</button> \n" + 
 				"<button type=\"button\">logout</button>\n" + 

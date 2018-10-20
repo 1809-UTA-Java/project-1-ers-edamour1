@@ -53,6 +53,28 @@
     <servlet-name>registerDao</servlet-name>
     <url-pattern>/regDao</url-pattern>
   </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <servlet-name>reimbursement</servlet-name>
+    <servlet-class>com.revature.ErsReimbursementServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>reimbursement</servlet-name>
+    <url-pattern>/reimburse</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>reimbursementDao</servlet-name>
+    <servlet-class>com.revature.ErsReimbursementDaoServlet </servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>reimbursementDao</servlet-name>
+    <url-pattern>/reimburseDao</url-pattern>
+  </servlet-mapping>
 
 </web-app>
 
