@@ -38,14 +38,7 @@ public class ersServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		
-		
-		
-		
-		
-		
+		// TODO Auto-generated method stub		
 		String username, password;
 		boolean canLogin = false;
 		username = request.getParameter("username");
@@ -62,7 +55,15 @@ public class ersServlet extends HttpServlet {
 			userInfo = (ArrayList<ErsUsers>) session.createQuery("from ErsUsers where uUsername = :uVar and uPassword = :pVar").setString("uVar",username).setString("pVar", password).list();
 			current = userInfo.get(0);
 		
-			writer.println(userInfo.size());
+		/*	writer.println(userInfo.size());
+			String go;
+			if(current.getUrId() == 0) {
+				go = "home";
+			}else {
+				go = "ManageHome";
+			}
+			
+			*/
 			RequestDispatcher rd = request.getRequestDispatcher("home");		
 			request.setAttribute("name", userInfo.get(0));
 			

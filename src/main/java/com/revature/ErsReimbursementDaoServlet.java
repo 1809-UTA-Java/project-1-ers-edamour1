@@ -1,6 +1,7 @@
 package com.revature;
 
 import java.io.IOException;
+import java.util.Random;
 import java.io.PrintWriter;
 import java.security.Timestamp;
 import javax.persistence.Temporal;
@@ -33,7 +34,10 @@ public class ErsReimbursementDaoServlet extends HttpServlet{
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
+		Random rand = new Random(); 
+		
+		int rand_int1 = rand.nextInt(5000)+100; 
+		
 		ErsReimbursement reimburementRequest = new ErsReimbursement();
 		
 		ArrayList<ErsReimbursement> l;
@@ -52,23 +56,26 @@ public class ErsReimbursementDaoServlet extends HttpServlet{
 		
 		ErsUsers currentUser = (ErsUsers) getServletContext().getAttribute("user");
 		
-		System.out.println(request.getParameter("travel"));
+		System.out.println(l.size());
 		
-		reimburementRequest.setrId(l.size()+1);
+		reimburementRequest.setrId(rand_int1);
 		reimburementRequest.setrAmount(amount);
 		reimburementRequest.setrDescription(description);
-		reimburementRequest.setRtStatus(1);
+		reimburementRequest.setRtStatus(0);
 		reimburementRequest.setuIdAuthor(currentUser.getuId());
 		reimburementRequest.setrSubmmitted(java.sql.Timestamp.valueOf(dateTime));
-		//reimburementRequest.set
 		
 		
 		Transaction tx = session.beginTransaction();
 		
-	session.save(reimburementRequest);
+		session.save(reimburementRequest);
 		
 		tx.commit();
 		
+		PrintWriter writer = response.getWriter();
+		Date date = new Date();
+		
+		writer.println("Request submitted "+date.getTime());
 		
 		//PrintWriter writer = response.getWriter();
 		

@@ -4,22 +4,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.hibernate.Session;
-
 import com.revature.model.ErsUsers;
-import com.revature.model.userRoles;
-import com.revature.util.HibernateUtil;
 
-/**
- * Servlet implementation class ersServlet
- */
-@WebServlet("/home/*")
-public class HomePageServlet extends HttpServlet {
+public class ViewRequestServlet extends HttpServlet{
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,22 +34,17 @@ public class HomePageServlet extends HttpServlet {
 				
 				"<body>\n" + 
 				
-				"<h1>Employee Homepage</h1>\n" + 
+				"<h1>Requests</h1>\n" + 
 				
 				"<h1>Menu</h1>\n" + 
 				
 				"<nav>\n" + 
-				"<form action = \"reimburse\" method = \"post\">\n" + 
-				"<button type=\"submit\">reimbursement requests</button>\n" +
+				"<form action = \"ViewPend\" method = \"post\">\n" + 
+				"<button type=\"submit\">Resolved</button>\n" +
 				"</form>\n" + 
 				
-			
-				"<form action = \"viewreq\" method = \"post\">\n" + 
-				"<button type=\"submit\">View Requests</button>\n" + 
-				"</form>\n" + 
-				
-				"<form action = \"info\" method = \"post\">\n" + 
-				"<button action = \"information\" type=\"submit\">View Information</button>\n" + 
+				"<form action = \"ViewResolve\" method = \"post\">\n" + 
+				"<button action = \"Request Status\" type=\"submit\">Pending</button>\n" + 
 				"</form>\n" + 
 				
 				"<button type=\"button\">logout</button>\n" + 	
@@ -70,7 +57,4 @@ public class HomePageServlet extends HttpServlet {
 		writer.close();
 		
 	}//end of doPost method
-	
-	
-	
-}//end of InformationServlet class
+}

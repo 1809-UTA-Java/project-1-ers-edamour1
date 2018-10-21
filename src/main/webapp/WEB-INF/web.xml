@@ -95,6 +95,54 @@
     <servlet-name>InformationDao</servlet-name>
     <url-pattern>/infoDao</url-pattern>
   </servlet-mapping>  
+  
+  
+  
+  
+   <servlet>
+    <servlet-name>ViewRequest</servlet-name>
+    <servlet-class>com.revature.ViewRequestServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ViewRequest</servlet-name>
+    <url-pattern>/viewreq</url-pattern>
+  </servlet-mapping>  
+  
+
+  
+   <servlet>
+    <servlet-name>ViewRequestResolve</servlet-name>
+    <servlet-class>com.revature.ViewRequestResolvedDaoServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ViewRequestResolve</servlet-name>
+    <url-pattern>/ViewResolve</url-pattern>
+  </servlet-mapping> 
+  
+
+   <servlet>
+    <servlet-name>ViewRequestPending</servlet-name>
+    <servlet-class>com.revature.ViewRequestPendingDaoServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ViewRequestPending</servlet-name>
+    <url-pattern>/ViewPend</url-pattern>
+  </servlet-mapping> 
+  
+
+ <servlet>
+    <servlet-name>ManagerHome</servlet-name>
+    <servlet-class>com.revature.ManagerServletHomePage</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>>ManagerHome</servlet-name>
+    <url-pattern>/>ManageHome</url-pattern>
+  </servlet-mapping> 
+  
 
 
 </web-app>

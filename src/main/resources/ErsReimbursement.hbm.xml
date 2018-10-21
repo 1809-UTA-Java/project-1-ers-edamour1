@@ -5,7 +5,7 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.revature.model.ErsReimbursement" table="ERS_REIMBURSEMENTS">
+	<class name="com.revature.model.ErsReimbursement" table="REIMBURSEMENTS">
 		<id name="rId" column="R_ID"></id>
 		<property name="rAmount" column="R_AMOUNT"/>	
 		<property name="rDescription" column="R_DESCRIPTION"/>	
