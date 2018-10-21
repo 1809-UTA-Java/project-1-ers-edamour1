@@ -26,26 +26,41 @@ public class HomePageServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ErsUsers k = (ErsUsers) request.getAttribute("name");
+		//ErsUsers j = (ErsUsers) getServletContext().getAttribute("user");
 		PrintWriter writer = response.getWriter();
-		
+	
 		writer.println("<!DOCTYPE html>\n" + 
 				"<html>\n" + 
+				
 				"<head>\n" + 
+				
 				"<meta charset=\"UTF-8\">\n" + 
-				"<title>Insert title here</title>\n" + 
+				
+				"<title></title>\n" + 
+				
 				"</head>\n" + 
+				
 				"<body>\n" + 
+				
 				"<h1>Employee Homepage</h1>\n" + 
+				
 				"<h1>Menu</h1>\n" + 
+				
 				"<nav>\n" + 
 				"<form action = \"reimburse\" method = \"post\">\n" + 
 				"<button type=\"submit\">reimbursement requests</button>\n" +
 				"</form>\n" + 
-				"<button action = \"information\" type=\"button\">information</button>\n" + 
-				"<button type=\"button\">update</button> \n" + 
-				"<button type=\"button\">logout</button>\n" + 
+				
+				
+				"<form action = \"info\" method = \"post\">\n" + 
+				"<button action = \"information\" type=\"submit\">View Information</button>\n" + 
+				"</form>\n" + 
+				
+				"<button type=\"button\">logout</button>\n" + 	
 				"</nav>\n" + 
+				
 				"</body>\n" + 
+				
 				"</html>");
 		
 		writer.close();

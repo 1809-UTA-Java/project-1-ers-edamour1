@@ -1,8 +1,8 @@
 package com.revature.model;
 
-import java.security.Timestamp;
+
 import java.sql.Blob;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -44,11 +44,11 @@ String rDescription;
 
 //@Temporal(value = TemporalType.TIMESTAMP)
 //@Column(name = "R_SUBMITTED")
-Date rSubmmitted;
+Timestamp rSubmmitted;
 
 //@Temporal(value = TemporalType.TIMESTAMP)
 //@Column(name = "R_RESOLVED")	
-Date r_resolved;
+Timestamp r_resolved;
 
 
 //@Column(name = "R_RECEIPT")	
@@ -125,22 +125,22 @@ public void setrDescription(String rDescription) {
 }
 
 
-public Date getrSubmmitted() {
+public Timestamp getrSubmmitted() {
 	return rSubmmitted;
 }
 
 
-public void setrSubmmitted(java.util.Date date) {
-	this.rSubmmitted = (Date) date;
+public void setrSubmmitted(Timestamp rSubmmitted) {
+	this.rSubmmitted = rSubmmitted;
 }
 
 
-public Date getR_resolved() {
+public Timestamp getR_resolved() {
 	return r_resolved;
 }
 
 
-public void setR_resolved(Date r_resolved) {
+public void setR_resolved(Timestamp r_resolved) {
 	this.r_resolved = r_resolved;
 }
 
@@ -161,6 +161,13 @@ public String toString() {
 			+ uIdResolver + ", rtType=" + rtType + ", rtStatus=" + rtStatus + ", rDescription=" + rDescription
 			+ ", rSubmmitted=" + rSubmmitted + ", r_resolved=" + r_resolved + ", R_RECEIPT=" + R_RECEIPT + "]";
 }
+
+
+
+
+
+
+
 
 
 

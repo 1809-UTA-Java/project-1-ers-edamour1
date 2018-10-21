@@ -66,7 +66,7 @@ public class ersServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("home");		
 			request.setAttribute("name", userInfo.get(0));
 			
-			//getServletContext().setAttribute("user",userInfo.get(0));
+			getServletContext().setAttribute("user",userInfo.get(0));
 	
 			rd.forward(request, response);
 		}else{

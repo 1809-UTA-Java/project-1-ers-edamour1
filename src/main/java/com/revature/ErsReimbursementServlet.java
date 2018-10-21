@@ -34,7 +34,11 @@ public class ErsReimbursementServlet extends HttpServlet {
 				"<form action = \"reimburseDao\" method = \"post\">\n" + 
 				"Amount <input type = \"text\" name = \"amount\" /><br/>\n" + 
 				"Description <textarea rows=\"4\" cols=\"50\" name = \"Description\">\n" +
-				"</textarea>\n" + 
+				"</textarea>\n" +
+				"<select id=\"mySelect\">\n" + 
+				"  <option name = \"travel\" value=\"0\">travel</option>\n" + 
+				"  <option name = \"meal\" value=\"1\">meal</option>\n" +  
+				"</select>"+
 				"<button type=\"submit\">Submit Request</button>\n" + 
 				"</form>\n" + 
 				"\n" + 
