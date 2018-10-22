@@ -33,25 +33,19 @@ public class ManagerHomePageServlet extends HttpServlet{
 				
 				"<body>\n" + 
 				
-				"<h1>Employee Homepage</h1>\n" + 
+				"<h1>Manager Homepage</h1>\n" + 
 				
 				"<h1>Menu</h1>\n" + 
 				
 				"<nav>\n" + 
-				"<form action = \"reimburse\" method = \"post\">\n" + 
-				"<button type=\"submit\">reimbursement requests</button>\n" +
+				"<form action = \"ManagerViewReso\" method = \"post\">\n" + 
+				"<button type=\"submit\">View Resolved</button>\n" +
 				"</form>\n" + 
 				
-			
-				"<form action = \"viewreq\" method = \"post\">\n" + 
-				"<button type=\"submit\">View Requests</button>\n" + 
+				"<form action = \"AcceptDeny\" method = \"post\">\n" + 
+				"<button type=\"submit\">View Pending</button>\n" +
 				"</form>\n" + 
 				
-				"<form action = \"info\" method = \"post\">\n" + 
-				"<button action = \"information\" type=\"submit\">View Information</button>\n" + 
-				"</form>\n" + 
-				
-				"<button type=\"button\">logout</button>\n" + 	
 				"</nav>\n" + 
 				
 				"</body>\n" + 

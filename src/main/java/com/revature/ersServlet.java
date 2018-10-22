@@ -55,16 +55,16 @@ public class ersServlet extends HttpServlet {
 			userInfo = (ArrayList<ErsUsers>) session.createQuery("from ErsUsers where uUsername = :uVar and uPassword = :pVar").setString("uVar",username).setString("pVar", password).list();
 			current = userInfo.get(0);
 		
-		/*	writer.println(userInfo.size());
+			writer.println(userInfo.size());
 			String go;
 			if(current.getUrId() == 0) {
 				go = "home";
 			}else {
-				go = "ManageHome";
+				go = "ManagerHome";
 			}
 			
-			*/
-			RequestDispatcher rd = request.getRequestDispatcher("home");		
+			
+			RequestDispatcher rd = request.getRequestDispatcher(go);		
 			request.setAttribute("name", userInfo.get(0));
 			
 			getServletContext().setAttribute("user",userInfo.get(0));

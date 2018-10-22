@@ -144,8 +144,39 @@
     <servlet-name>ManagerHomePage</servlet-name>
     <url-pattern>/ManagerHome</url-pattern>
   </servlet-mapping> 
-    
   
+   <servlet>
+    <servlet-name>ManagerViewResolved</servlet-name>
+    <servlet-class>com.revature.ManagerViewResolvedServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ManagerViewResolved</servlet-name>
+    <url-pattern>/ManagerViewReso</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <servlet-name>AcceptOrDeny</servlet-name>
+    <servlet-class>com.revature.AcceptOrDenyServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AcceptOrDeny</servlet-name>
+    <url-pattern>/AcceptDeny</url-pattern>
+  </servlet-mapping> 
+
+
+     <servlet>
+    <servlet-name>pendingDao</servlet-name>
+    <servlet-class>com.revature.pendingDaoServlet</servlet-class>
+</servlet>
+  
+  <servlet-mapping>
+    <servlet-name>pendingDao</servlet-name>
+    <url-pattern>/AcceptDenyPending</url-pattern>
+  </servlet-mapping> 
+    
+    
   
   
 </web-app>

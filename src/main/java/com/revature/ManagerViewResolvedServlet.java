@@ -17,7 +17,8 @@ import com.revature.model.ErsReimbursementType;
 import com.revature.model.ErsUsers;
 import com.revature.util.HibernateUtil;
 
-public class ViewRequestPendingDaoServlet extends HttpServlet {
+public class ManagerViewResolvedServlet extends HttpServlet {
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -41,7 +42,7 @@ public class ViewRequestPendingDaoServlet extends HttpServlet {
         ErsReimbursementStatus status;
         ErsReimbursementType type;
         ErsUsers resolver;
-        listRimburse  = (ArrayList<ErsReimbursement>) session.createQuery("from ErsReimbursement where uIdAuthor = :uVar").setString("uVar",user.getuId()+"").list();
+        listRimburse  = (ArrayList<ErsReimbursement>) session.createQuery("from ErsReimbursement").list();
 		writer.println("<!DOCTYPE html>\n" + 
 				"<html>\n" + 
 				
@@ -49,13 +50,13 @@ public class ViewRequestPendingDaoServlet extends HttpServlet {
 				
 				"<meta charset=\"UTF-8\">\n" + 
 				
-				"<title>Pending</title>\n" + 
+				"<title>Reesolved</title>\n" + 
 				
 				"</head>\n" + 
 				
 				"<body>\n" + 
 				
-				"<h1>Resolvers</h1>\n");
+				"<h1>Resolved</h1>\n");
 		
 		//listStatus = (ArrayList<ErsReimbursementStatus>) session.createQuery("from ErsReimbursementStatus where rsId = :sVar").setString("sVar","1").list();
 		
@@ -87,5 +88,6 @@ public class ViewRequestPendingDaoServlet extends HttpServlet {
 		
 		writer.close();
 		
-	}//end of doPost method
+	}//end of doPost method	
+
 }
