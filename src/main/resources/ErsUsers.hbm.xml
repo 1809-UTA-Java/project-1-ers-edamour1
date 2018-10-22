@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.revature.model.ErsUsers" table="ERS_USERS">
+		<id name="uId" column="U_ID"></id>
+		<property name="uUsername" column="U_USERNAME"/>	
+		<property name="uPassword" column="U_PASSWORD"/>	
+		<property name="uFirstname" column="U_FIRSTNAME"/>	
+		<property name="uLastname" column="U_LASTNAME"/>	
+		<property name="uEmail" column="U_EMAIL"/>	
+		<property name="urId" column="UR_ID"/>	
+	</class>
+</hibernate-mapping>
+
+	
+	
+	

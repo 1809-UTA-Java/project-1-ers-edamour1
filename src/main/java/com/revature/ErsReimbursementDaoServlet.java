@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.Random;
 import java.io.PrintWriter;
 import java.security.Timestamp;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import java.sql.Blob;
 
 import javax.servlet.ServletException;

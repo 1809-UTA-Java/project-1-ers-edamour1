@@ -17,7 +17,7 @@ import org.hibernate.Session;
 
 import com.revature.model.ErsUsers;
 import com.revature.util.HibernateUtil;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
 
 /**
  * Servlet implementation class ersServlet
@@ -73,10 +73,11 @@ public class ersServlet extends HttpServlet {
 		}else{
 			writer.println("Invalid username or passeword");
 		}//end of else statement
-				
+
 	}//end of doPost method
 	
 	protected static boolean verified(String username, String password, Session session) {
+		System.out.println("In verified");
 		ArrayList<ErsUsers> usernames;
 		usernames = (ArrayList<ErsUsers>) session.createQuery("from ErsUsers").list();
 		ErsUsers currentInfo;

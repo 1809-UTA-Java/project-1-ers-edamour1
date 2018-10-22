@@ -1,8 +1,6 @@
 package com.revature.repository;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import javax.transaction.HeuristicMixedException;
 import javax.transaction.HeuristicRollbackException;
 import javax.transaction.RollbackException;
@@ -11,11 +9,8 @@ import org.hibernate.Transaction;
 
 import org.hibernate.Session;
 
-import com.revature.ersServlet;
 import com.revature.model.ErsReimbursementStatus;
-import com.revature.model.ErsReimbursementType;
 import com.revature.model.ErsUsers;
-import com.revature.model.userRoles;
 import com.revature.util.HibernateUtil;
 
 public class erase {

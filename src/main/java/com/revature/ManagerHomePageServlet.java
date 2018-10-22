@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.revature.model.ErsUsers;
 
-public class ManagerServletHomePage extends HttpServlet{
-
+public class ManagerHomePageServlet extends HttpServlet{
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -28,27 +27,28 @@ public class ManagerServletHomePage extends HttpServlet{
 				
 				"<meta charset=\"UTF-8\">\n" + 
 				
-				"<title>Reimbursement Manager</title>\n" + 
+				"<title></title>\n" + 
 				
 				"</head>\n" + 
 				
 				"<body>\n" + 
 				
-				"<h1>Requests</h1>\n" + 
+				"<h1>Employee Homepage</h1>\n" + 
 				
 				"<h1>Menu</h1>\n" + 
 				
 				"<nav>\n" + 
-				"<form action = \"ViewPend\" method = \"post\">\n" + 
-				"<button type=\"submit\">Resolved</button>\n" +
+				"<form action = \"reimburse\" method = \"post\">\n" + 
+				"<button type=\"submit\">reimbursement requests</button>\n" +
 				"</form>\n" + 
 				
-				"<form action = \"ViewResolve\" method = \"post\">\n" + 
-				"<button action = \"Request Status\" type=\"submit\">Pending</button>\n" + 
+			
+				"<form action = \"viewreq\" method = \"post\">\n" + 
+				"<button type=\"submit\">View Requests</button>\n" + 
 				"</form>\n" + 
 				
-				"<form action = \"ViewResolve\" method = \"post\">\n" + 
-				"<button action = \"Request Status\" type=\"submit\">Pending</button>\n" + 
+				"<form action = \"info\" method = \"post\">\n" + 
+				"<button action = \"information\" type=\"submit\">View Information</button>\n" + 
 				"</form>\n" + 
 				
 				"<button type=\"button\">logout</button>\n" + 	
@@ -61,4 +61,5 @@ public class ManagerServletHomePage extends HttpServlet{
 		writer.close();
 		
 	}//end of doPost method
+
 }

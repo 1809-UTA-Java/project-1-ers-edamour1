@@ -133,17 +133,20 @@
   </servlet-mapping> 
   
 
- <servlet>
-    <servlet-name>ManagerHome</servlet-name>
-    <servlet-class>com.revature.ManagerServletHomePage</servlet-class>
+
+
+  <servlet>
+    <servlet-name>ManagerHomePage</servlet-name>
+    <servlet-class>com.revature.ManagerHomePageServlet</servlet-class>
 </servlet>
   
   <servlet-mapping>
-    <servlet-name>>ManagerHome</servlet-name>
-    <url-pattern>/>ManageHome</url-pattern>
+    <servlet-name>ManagerHomePage</servlet-name>
+    <url-pattern>/ManagerHome</url-pattern>
   </servlet-mapping> 
+    
   
-
-
+  
+  
 </web-app>
 
